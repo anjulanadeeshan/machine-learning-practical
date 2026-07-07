@@ -46,5 +46,16 @@ df['Salary'] = np.where(
         df['Salary']
     )
 )
+upper_age = 60
+lower_age = 18
 
+df['Age'] = np.where(
+    df['Age'] > upper_age,
+    upper_age,
+    np.where(
+        df['Age'] < lower_age,
+        lower_age,
+        df['Age']
+    )
+)
 print(df)
