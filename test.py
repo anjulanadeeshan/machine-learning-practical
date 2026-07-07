@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+from sklearn.preprocessing import StandardScaler,MinMaxScaler
 
 df = pd.read_csv('./student_data.csv')
 print('Description: ', df.describe())
@@ -58,4 +59,12 @@ df['Age'] = np.where(
         df['Age']
     )
 )
+print(df)
+
+print('--Feature scaling--')
+scaler_minmax = MinMaxScaler()
+df['Attendance_normalized'] = scaler_minmax.fit_transform(df[['Attendance']])
+
+scaler_std = StandardScaler()
+df['Salary_standardized'] = scaler_std.fit_transform(df[['Salary']])
 print(df)
