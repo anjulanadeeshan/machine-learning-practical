@@ -1,0 +1,10 @@
+Employee_ID,Name,Status,Age,Department,Joining_Date,Salary,Experience,Performance_Rating
+EMP001,John Perera,Single,28,IT,2022-05-10,75000,3,4.5
+EMP002,Anusha Silva,Married,25,HR,2023-01-15,48000,1.5,4.2
+EMP003,Kamal Raj,M,32,single,2021-03-20,thirty five thousand,5,3.8
+EMP004,Nadeesha Perera,MArried,29,IT,,62000,4,4.7
+EMP005,Saman Kumara,Single ,45,Marketing,2020-11-05,125000,8,4.1
+EMP006,Tharindu Silva,S,150,IT,2022-08-12,52000,2,2.9
+EMP002,Anusha Silva,married,25,HR,2023-01-15,48000,1.5,4.2
+EMP007,Shalini Fernando,M,26,hr,2023-06-01,51000,2,4.3
+EMP008,Ruwan Lakmal,M,27,IT,2021-09-10,68000,N/A,4.6

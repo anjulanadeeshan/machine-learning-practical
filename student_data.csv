@@ -1,0 +1,8 @@
+Student_ID,Name,Gender,Age,GPA,Attendance,Department,Salary
+STU001,Ahmad Khan,Male,21,3.85,92.5,Computer Science,45
+STU002,Priya Sharma,Female,20,3.45,88,Business,52000
+STU002,Priya Sharma,f emale,20,3.45,88,Business,52000
+STU004,Nisha Patel,F,twenty,4,95,Psychology,48000
+STU005,Kumar Raj,Male,22,3.67,76,0,1000000
+STU006,Sara Ahmed,       Female, ,3.9,N/A,Computer Science,43000
+STU007,Mohamed Ali,M,150,2.8,85,Computer Since,47000
