@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import StandardScaler,MinMaxScaler
+from sklearn.preprocessing import StandardScaler,MinMaxScaler,LabelEncoder
+
 
 df = pd.read_csv('./student_data.csv')
 print('Description: ', df.describe())
@@ -63,8 +64,25 @@ print(df)
 
 print('--Feature scaling--')
 scaler_minmax = MinMaxScaler()
-df['Attendance_normalized'] = scaler_minmax.fit_transform(df[['Attendance']])
+df['Attendance_normalized'] = scaler_minmax.fit_transform(df[['Attendance']]).round(4)
 
 scaler_std = StandardScaler()
-df['Salary_standardized'] = scaler_std.fit_transform(df[['Salary']])
+df['Salary_standardized'] = scaler_std.fit_transform(df[['Salary']]).round(4)
 print(df)
+
+#label encoding
+print('--Label Encoding--')
+
+le = LabelEncoder()
+df['Department'] = le.fit_transform(df['Department'])
+print(df)
+
+#Encoding Categorical Data
+df = pd.get_dummies(df, columns=['Gender'], dtype=int)
+print("\n---6. After Categorical Encoding ---")
+print(df.info())
+
+#save cleaned dataset'
+
+df.to_csv('./student_data_cleaned.csv', index=False)
+print("\n Cleaned Dataset saved as 'student_data_cleaned.csv'\n")
