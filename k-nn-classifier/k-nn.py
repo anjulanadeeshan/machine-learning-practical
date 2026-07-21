@@ -57,3 +57,6 @@ for test_point in X_test:
 accuracy = accuracy_score(y_test, prediction)
 
 print("Accuracy:", accuracy)
+
+cm = confusion_matrix(y_test, prediction)
+print("cm :",cm)
